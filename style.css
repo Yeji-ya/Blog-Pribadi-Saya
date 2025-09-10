@@ -1,0 +1,99 @@
+/* Custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+    color: #1e293b; /* Tailwind slate-800 */
+}
+
+header {
+    background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+header h1 {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+header p {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* Form styling */
+form input[type="text"],
+form textarea {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    box-shadow: 0 0 8px 2px #14b8a6; /* teal-400 glow */
+    border-color: #14b8a6;
+    outline: none;
+}
+
+button {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(20, 184, 166, 0.4);
+}
+
+button:hover {
+    box-shadow: 0 6px 12px rgba(20, 184, 166, 0.6);
+}
+
+/* Post cards */
+article {
+    background: #ffffffcc; /* white with slight transparency */
+    backdrop-filter: saturate(180%) blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Delete button */
+article button {
+    background: #ef4444; /* red-500 */
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4);
+}
+
+article button:hover {
+    background: #dc2626; /* red-600 */
+    box-shadow: 0 6px 14px rgba(220, 38, 38, 0.6);
+}
+
+/* Responsive image */
+img {
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* Scrollbar styling for posts list */
+#posts-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+#posts-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#posts-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#posts-list::-webkit-scrollbar-thumb {
+    background-color: #14b8a6;
+    border-radius: 4px;
+}
